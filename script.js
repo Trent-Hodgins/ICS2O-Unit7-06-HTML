@@ -1,14 +1,18 @@
+// These define our variables.//
 let number = 15
 let guess = 0
 
-while (guess != number) {
+// The "while" is for making a loop. This makes it so the user has to keep guessing untill they guess the right number.//
+while (guess !== number) {
   guess = prompt('Guess my age')
+  guess = parseInt(guess)
 
- if (guess > '15') {
-   alert('Guess is too high.')
-  } else if (guess < '15') {
+// These are for telling the user if they need to guess higher or lower.//
+  if (guess > number) {
+    alert('Guess is too high.')
+  } else if (guess < number) {
    alert('Guess is too low.')
-  } else if (guess === '15') {
-   alert('You got it right!')
- }
+  } else if (guess === number) {
+    alert('you got it right')
+  }
 }
